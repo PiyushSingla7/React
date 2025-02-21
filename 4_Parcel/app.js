@@ -1,14 +1,22 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    React.createElement("h1", {}, "i am an h1 tag")
-  )
+//h1 created using react.
+//react..createElement -> object -> converted to html element when rendered
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "hi bro what's up"
 );
-const htag = createRoot(document.getElementById("htag"));
-htag.render(parent);
+console.log(heading);
+
+//h1 created using jsx.
+//jsx->html like or xml like syntax
+//in backend jsx is converted to react.createElement using babel -> object -> converted to html element when rendered
+const jsxheading = (<h1 id="heading" className="h1_heading">hi bro what's up</h1>);
+console.log(jsxheading);
+
+const root = createRoot(document.getElementById("root"));
+//root.render(heading);
+root.render(jsxheading);
+
