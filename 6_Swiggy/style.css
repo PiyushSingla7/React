@@ -72,7 +72,7 @@ body {
   width: 80%;
 }
 
-.search-btn{
+.search-btn {
   padding: 10px 20px;
   cursor: pointer;
   background: linear-gradient(to right, #ff914d, #ff6a00);
@@ -236,7 +236,6 @@ body {
   }
 }
 
-
 /* Footer */
 .footer {
   background-color: white;
@@ -297,6 +296,6 @@ body {
   }
 }
 
-.Navbar{
+.Navbar {
   display: flex;
 }

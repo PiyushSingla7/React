@@ -34,3 +34,23 @@ Default Imports:
 
 
 whenever state variables are updated, react triggers a recollination cycle (it re-renders the component).
+
+//if there is no dependency array then use effect will be called every time the component is re-rendered.
+useEffect(() => {
+    console.log("use effect called");
+},);
+
+//if there is a empty dependency array then use effect will be called only on initial render (only once).
+useEffect(() => {
+    fetchData();
+}, []);
+
+//if there is a dependency array then use effect will be called whenever btn updates or re-renders.
+useEffect(() => {
+    fetchData();
+}, [btn]);
+
+
+2 types of routing in web apps
+- Client Side Routing :- SPA (Single Page Application) - React Router DOM - Reload the affected page/area only - Faster
+- Server Side Routing :- MPA (Multi Page Application) - Express Router - Reload the whole page - Slower

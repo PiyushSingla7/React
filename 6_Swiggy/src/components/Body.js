@@ -18,7 +18,9 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
-      const restaurantList = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      const restaurantList =
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
       setAllRestaurants(restaurantList);
       setFilteredRestaurants(restaurantList);
     } catch (error) {
@@ -52,7 +54,7 @@ const Body = () => {
             onChange={(e) => {
               const searchValue = e.target.value;
               setSearchText(searchValue);
-              
+
               const filtered = allRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchValue.toLowerCase())
               );
